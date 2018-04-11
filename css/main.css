@@ -210,6 +210,9 @@ tr:hover {
     cursor: pointer;
 }
 
+button {
+    outline: none;
+}
 
 table {
     -webkit-box-shadow: -2px 10px 47px 1px rgba(0,0,0,0.51);
