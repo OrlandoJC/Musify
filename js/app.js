@@ -177,7 +177,7 @@ var player = (function(likesController, modal){
      * get songs from folder 'songs/song.mp3'
     *************************************/
     var getSongs = function(){
-        getJSON('https://raw.githubusercontent.com/OrlandoJC/Musify/776dc90f915fc3a1808c735cb9bf9cc1a8f7010c/data/songs.jso', function(response){
+        getJSON('https://raw.githubusercontent.com/OrlandoJC/Musify/776dc90f915fc3a1808c735cb9bf9cc1a8f7010c/data/songs.json', function(response){
             renderList( response );
             songs = response;
         });
