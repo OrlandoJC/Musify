@@ -164,7 +164,6 @@ var player = (function(likesController, modal){
                 musicDetails.setAttribute("class", "see");
                 selectSong( e.target.parentNode.id );
                 currentSong = e.target.parentNode.id;
-                ligthSelected();
                 play.setAttribute("src", "img/pause.svg");            
             }else if ( isPlaying( song )) { // if song is current execting stop previous and play the newest
                 song.pause();
