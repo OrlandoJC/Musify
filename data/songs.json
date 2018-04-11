@@ -1,0 +1,42 @@
+[
+        {
+            "id": 0,
+            "cover" :"img/radioactive.jpg",
+            "name":"Radioactive",
+            "artist" :"imagine dragons",
+            "album":"Imagine dragons EP",
+            "time":"3:30",
+            "href" : "songs/radioactive.mp3",
+            "lirycs" : "<p> Whoa, oh, oh <br>Whoa, oh, oh <br>Whoa, oh, oh <br>Whoa <br>I'm waking up to ash and dust <br>I wipe my brow and I sweat my rust <br>I'm breathing in the chemicals <br>I'm breaking in, shaping up, then checking out on the prison bus <br>This is it, the apocalypse <br>Whoa <br>I'm waking up, I feel it in my bones <br>Enough to make my systems blow <br>Welcome to the new age, to the new age <br>Welcome to the new age, to the new age <br>Whoa, oh, oh, oh, oh, whoa, oh, oh, oh, I'm radioactive, radioactive <br>Whoa, oh, oh, oh, oh, whoa, oh, oh, oh, I'm radioactive, radioactive <br> I raise my flags, don my clothes <br>It's a revolution, I suppose <br>We'll paint it red to fit right in <br>Whoa <br>I'm breaking in, shaping up, then checking out on the prison bus <br>This is it, the apocalypse <br>Whoa <br>I'm waking up, I feel it in my bones <br>Enough to make my systems blow <br>Welcome to the new age, to the new age <br>Welcome to the new age, to the new age <br>Whoa, oh, oh, oh, oh, whoa, oh, oh, oh, I'm radioactive, radioactive <br>Whoa, oh, oh, oh, oh, whoa, oh, oh, oh, I'm radioactive, radioactive <br>All systems go, the sun hasn't died <br>Deep in my bones, straight from inside <br>I'm waking up, I feel it in my bones <br>Enough to make my systems blow <br>Welcome to the new age, to the new age <br>Welcome to the new age, to the new age <br>Whoa, oh, oh, oh, oh, whoa, oh, oh, oh, I'm radioactive, radioactive <br>Whoa, oh, oh, oh, oh, whoa, oh, oh, oh, I'm radioactive, radioactive! <br> <p> "
+        },
+        {
+            "id": 1,
+            "cover" : "img/acid.jpg",
+            "name"  : "ayce's song",
+            "artist" : "Acid Ghost",
+            "album" : "Vacation II",
+            "time"  : "2:30",
+            "href"  : "songs/ayce.mp3",
+            "lirycs" : "<p> Feeling empty <br>Push back the light <br>Something morbid <br>Chaotic, seems right <br><br>These lucid dreams are turning real <br>Darkness creeps, your kiss i feel <br>Everything just doesn't feel real <br>I doubt<br>I cry <br>I shout <br>In my mind <br>Then i push you away and now we're not okay <br>And were stuck in this loop in a matter of days <br>I hurt you, what did i do? <br>'cus when i felt your embrace and it felt out of place <br>I fake a smile on my face <br>And tell you were all okay? <br>It's not true, i don't love you anymore <br> Growing anxious <br>The walls cave in <br>Out of focus <br>Can't help but feel thin <br>  These lucid dreams are turning real <br>Darkness creeps, your kiss i feel <br>Everything just doesn't feel real <br>Then i push you away and now we're not okay <br>And were stuck in this loop in a matter of days <br>I hurt you, what did i do? <br>'cus when i felt your embrace and it felt out of place <br>I fake a smile on my face <br>And tell you were all okay? <br>It's not true, i don't love you anymore <br> <p> "         
+        },
+        {
+            "id": 2,
+            "cover" : "img/acid.jpg",
+            "name":"Mistakes",
+            "artist" : "Acid Ghost",
+            "album":"Vacation",
+            "time":"3:30",
+            "href" : "songs/mistakes.mp3",
+            "lirycs" : "<p>i've been letting out mistakes<br>for all of you to hate <br> when 'm not okay<br>will all of you still be around?<br>when I'm lost <br>the white and brown i bought<br>when my medicine arrives <br>i feel very alive inside <br>its not okay <br>to always be in pain <br>when you're OD'ing who's gna be buy your side? <br>it's all you buy <br>and we're shooting all the time <br>and your friends will start to change<br>and your not really the same<br> i've been letting out mistakes<br>for all of you to hate<br>when 'm not okay<br>will all of you still be around?<br>when I'm lost<br>the white and brown i bought<br>when my medicine arrives<br>i feel very alive inside<br>its not okay<br>to always be in pain<br>when you're OD'ing who's gna be buy your side?<br>it's all you buy<br>and we're shooting all the time<br>and your friends will start to change<br>and your not really the same <br>and your not really the same <br>and your not really the same <br>and your not really the same <br>and your not really the same<p> <br>" 
+        },
+        {
+            "id": 3,
+            "cover" : "img/mugen.jpg",
+            "name":"Going Down",
+            "artist" : "Mugen",            
+            "album":"Single-MuGeN",
+            "time":"2:58",
+            "href" : "songs/goingDown.mp3",
+            "lirycs" : "<p> :( Aun no hay letra para esta cancion </p> "
+        }
+    ]

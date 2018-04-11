@@ -1,0 +1,283 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f6f7fb;
+    font-family: 'Comfortaa', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+header {
+    padding: 20px;
+    width: 100%;
+    background-image: linear-gradient(rgba(28, 181, 224, 0.877), #1010becb);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 1s cubic-bezier(0.85, 0.1, 0.1, 0.62);
+   
+}
+
+nav {
+    width: 100%;
+    height: 70px;
+    border-bottom: 1px solid #ddd;
+    font-weight: 700;
+    position: relative;
+    background: white;
+    z-index: 100;
+}
+
+nav span {
+    font-size: 1.3em;
+
+}
+
+nav .social {
+    display: inline-block;
+}
+
+.header__playlist h1 {
+    font-weight: 700;
+    color: #1e1e1f;
+    font-size: 1em;
+}
+
+
+.song__cover img{
+    -webkit-box-shadow: -2px 10px 47px 1px rgba(0,0,0,0.51);
+    -moz-box-shadow: -2px 10px 47px 1px rgba(0,0,0,0.51);
+    box-shadow: -2px 10px 47px 1px rgba(0,0,0,0.51);
+    z-index: 1;
+}
+
+.song__information {
+    line-height: 1;
+}
+
+#song__title {
+    margin-bottom: 0;
+}
+#song_subtitle {
+    margin-top: 0;
+    font-size: 1.2em;
+    color: rgba(233, 229, 230, 0.527)
+}
+
+.song__description > span {
+    font-weight: lighter;
+}
+
+.control__button {
+    background-color: transparent;
+    border: none;
+    width: 20px;
+    box-shadow: slategrey;
+    margin-right: 20px;
+}
+
+.song__controls {
+    margin-top: 20px;
+}
+
+
+#bar {
+    width: 50%;
+    height: 5px;
+    background-color: white;
+    border: 10px;
+    display: flex;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+#point {
+    width: 20px;
+    height: 100%;
+    background: rgb(233, 17, 82);
+}
+
+#buttons {
+    margin-top: 10px;
+    margin-left: 8%;
+}
+
+
+
+
+main {
+    margin-top: 80px;
+}
+
+
+td {
+    background: white;
+    vertical-align: middle !important;
+    font-weight: 700;
+    color: #1e1e1f;
+}
+
+
+tr:hover {
+    cursor: pointer;
+}
+
+
+.ocult {
+    margin-top: -350px;
+}
+
+.see {
+    margin-top: 0;
+}
+
+.active--song {
+    background-color: rgb(233, 17, 82);
+    color: white;
+}
+
+.white {
+    color: white;
+}
+.center {
+    text-align: center;
+}
+
+.control__button{
+    height: 40px;
+    width: 40px;
+    border-radius : 50%;
+    border: none;
+    color: black;
+}
+
+.lirycs__button {
+    border: 1px solid white;
+    padding: 5px 10px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 15px;
+    cursor: wait;
+}
+
+.lirycs__button:hover {
+   color: black;
+   background-color: white;
+}
+
+.hideModal {
+    visibility: hidden;
+}
+
+.showModal {
+    visibility: visible;
+}
+
+.modalElement {
+    width: 60%;
+    left: 20%;
+    top: 10%;    
+    height: 80vh;
+    background-color: white;
+    position: absolute;
+    box-shadow: -2px 10px 47px 1px rgba(0,0,0,0.51);
+    border-radius: 5px;
+    overflow: scroll;
+    line-height: 1.7;
+}
+
+.modalElement > span {
+    background-color: red;
+    padding: 10px 20px;
+    color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 1.2em;
+}
+
+.modalElement > p {
+   font-size: 1.5em;
+   padding: 20px;
+   text-align: center;
+}
+
+
+.modalElement > span:hover {
+    cursor: pointer;
+}
+
+
+table {
+    -webkit-box-shadow: -2px 10px 47px 1px rgba(0,0,0,0.51);
+    -moz-box-shadow: -2px 10px 47px 1px rgba(0,0,0,0.51);
+    box-shadow: -2px 8px 45px 1px rgba(0, 0, 0, 0.082);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+td > img {
+    text-align: center;
+}
+
+
+footer {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    position: relative;
+    bottom: 0px;
+
+}
+
+
+@media only screen and (max-width: 580px) and (min-width: 300px) {
+    nav {
+        text-align: center;
+    }
+
+    header {
+        text-align: center;
+    }
+
+    header img {
+        margin: 20px auto;
+    }
+    
+
+    #bar{
+        margin: 0 auto;
+        width: 80%;
+    }
+
+    .ocult {
+        margin-top: -57
+        
+        0px;
+    }
+
+    .header__playlist{
+        text-align: center;
+        font-size: 1.5em;
+        margin-bottom: 30px;
+    }
+
+    .lirycs__button {
+        margin-top: 25px;
+        padding: 20px;
+    
+    }
+    main {
+        margin: 40px;
+    }
+
+    .modalElement{
+        width: 90%;
+        left: 5%;
+    }
+
+}
+

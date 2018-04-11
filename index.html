@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name = "description" content="Musify Music Player">
+    <meta rel ="icon" href="img/wave.png">
+    
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"/>      
+    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+    <title>musify home player</title>
+</head>
+<body>
+    <nav>
+        <div class="container">
+        <a href="/"><img src="img/wave.png" height="60" alt=""> </a>   <span>Musify</span>
+        <!-- <div class="social">
+            <a href=""><i class="fa fa-facebook"></i></a>
+            <a href=""><i class="fa fa-twitter"></i></a>
+            <a href=""><i class="fa fa-github"></i></a>
+            <a href=""><i class="fa fa-linkedin"></i></a>
+        </div> -->
+        </div>
+    </nav>
+    <header id="song" class="ocult">
+        <div class="container white">
+            <div class="row row__song">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <div class="song__information">
+                        <div class="song__tags">
+                            <!-- Be who you are and say what you feel, because those who mind don't matter and those who matter don't mind.” -->
+                        </div>
+                        <div class="song__info">
+                            <div class="song__title">
+                                <h1 id="song__title">Break Down</h1>
+                                <h2 id="song_subtitle"></h2>
+                            </div>
+                            <div class="song__description">
+                                <p> Album    : <span id="song__description"></span></p>
+                                <p> Duration : <span id="song__duration"></span></p>                       
+                            </div>
+                        </div>
+                        <div class="song__controls">
+                            <div id="status-bar">
+                                
+                                <div id="bar">
+                                    <div id="point"></div>
+                                </div>
+                            </div>
+                            <div id="buttons">
+                                <button class="control__button" ><img src="img/back.svg" height="70%"alt="" id="pre" ></button>
+                                <button class="control__button" ><img src="img/play.svg" height="70%"alt="" id="play"></button>
+                                <button class="control__button" ><img src="img/next.svg"  height="70%"alt="" id="next"></button>
+                            </div>
+                            <div class="button__lirycs">
+                                <a href="#" class="lirycs__button" id="lirycs__button" disabled>See lirycs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 center-row">
+                    <div class="song__cover">
+                        <img src="img/logo.png"  id="song__cover" class="img-responsive" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main id = "main-player ">
+        <div class="container playlist " id = "playlist">
+            <div class="header__playlist">
+                <h1>Canciones disponibles</h1>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-xs-12 table-responsive">
+                    <table  class="table table-hover table-responsive table-condensed">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th> </th>
+                                <th>Artist</th>
+                                <th>Title</th>
+                                <th>Album</th>
+                                <th>Time</th>
+                             </tr>
+                        </thead>
+                        <tbody id="musicListTable">
+                            <i id="spinner"></i>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+             
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            Made with <i class="fa fa-heart" style="color:red"></i> by Orlando de jesus | Ver el codigo en <a target="blank" href="https://github.com/OrlandoJC">Github</a>
+        </div>   
+    </footer>
+
+    <script src="./js/domready.js"></script>
+    <script src="./js/storage.js"></script>
+    <script src="./js/likes.js"></script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/app.js"></script>
+</body>
+</html>
