@@ -2,7 +2,7 @@
 
 ## Screen shot
 
-![alt text](https://i.imgur.com/UY0qn3q.png "ScreenShot")
+![alt text](https://i.imgur.com/KFMOd7U.png "ScreenShot")
 
 ##mobile
 
