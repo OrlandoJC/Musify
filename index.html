@@ -7,9 +7,10 @@
     <meta name = "description" content="Musify Music Player">
     <meta rel ="icon" href="img/wave.png">
     
-    <!-- Latest compiled and minified CSS -->
     <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.1/build/css/alertify.min.css"/>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.1/build/css/themes/default.min.css"/> 
     <link rel="stylesheet" type="text/css" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"/>      
     <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">  
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -48,19 +49,36 @@
                         </div>
                         <div class="song__controls">
                             <div id="status-bar">
+                                    <div class="progress_time"><span id="progress_time"></span></div>   
                                 
                                 <div id="bar">
-                                    <div id="point"></div>
+                                    <div id="point"></div>                                                                 
                                 </div>
+                                <div class="progress_time"><span id="time_duration" ></span></div>    
+                                
                             </div>
                             <div id="buttons">
                                 <button class="control__button" ><img src="img/back.svg" height="70%"alt="" id="pre" ></button>
                                 <button class="control__button" ><img src="img/play.svg" height="70%"alt="" id="play"></button>
                                 <button class="control__button" ><img src="img/next.svg"  height="70%"alt="" id="next"></button>
                             </div>
-                            <div class="button__lirycs">
-                                <a href="#" class="lirycs__button" id="lirycs__button" disabled>See lirycs</a>
+                            
+                            <div class="song__options">
+                                <div class="button__lirycs">
+                                    <a href="#" class="lirycs__button button__control" id="lirycs__button" disabled><i class="fa fa-book" aria-hidden="true"></i></a>
+                                </div>
+                                <div class="button__repeat">
+                                     <a href="#" class="lirycs__button button__control" id="repeat__button" disabled><i class="fa fa-repeat"></i></a>
+                                </div>
+                                <div class="button__shuffle">
+                                    <a href="#" class="lirycs__button button__control" id="shuffle__button" disabled><i class="fa fa-random"></i></a>
+                                </div>
+                                <div class="range">
+                                    <a href="#" class="lirycs__button button__control"  disabled><i class="fa fa-volume-up"></i></a>                                    
+                                    <input type="range" id="range__sound" value = "100">
+                                </div>
                             </div>
+        
                         </div>
                     </div>
                 </div>
@@ -104,7 +122,9 @@
             Made with <i class="fa fa-heart" style="color:red"></i> by Orlando de jesus | Ver el codigo en <a target="blank" href="https://github.com/OrlandoJC">Github</a>
         </div>   
     </footer>
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.11.1/build/alertify.min.js"></script>
 
+    <!-- CSS -->
     <script src="./js/domready.js"></script>
     <script src="./js/storage.js"></script>
     <script src="./js/likes.js"></script>

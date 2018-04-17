@@ -12,11 +12,10 @@
 /** **********************************************
  * Autor : orlando de jesus 
  * Date : april 10th
- * Licensed : MIT
 *************************************************/
 
 
-var player = (function(likesController, modal){
+var player = (function(likesController, modal, alertify){
     var pre             = document.getElementById('pre'),
         play            = document.getElementById('play'),
         next            = document.getElementById('next'),
@@ -29,11 +28,19 @@ var player = (function(likesController, modal){
         songDuration    = document.getElementById('song__duration'),
         point           = document.getElementById('point'),
         spinner         = document.getElementById('spinner'),
-        lirycs          = document.getElementById('lirycs__button');
+        lirycs          = document.getElementById('lirycs__button'),
+        progressTime    = document.getElementById('progress_time'),
+        timeDuration    = document.getElementById('time_duration'),
+        buttonShuffle   = document.getElementById('shuffle__button'),
+        buttonRepeat    = document.getElementById('repeat__button'),
+        rangeVolume     = document.getElementById('range__sound');      
+        
     
     var songs;
     var currentSong;
     var song = new Audio();
+    var isShuffle = false;
+    var isRepeat = false    ;
     
     /**
      * @param {id of the current selected song} id 
@@ -45,7 +52,9 @@ var player = (function(likesController, modal){
         subtitle.textContent        = songs[id]["artist"];
         songDescription.textContent = songs[id]["album"];
         songDuration.textContent    = songs[id]["time"];
-        songCover.setAttribute("src", songs[id]["cover"])
+        timeDuration.textContent    = songs[id]["time"];
+        songCover.setAttribute("src", songs[id]["cover"]);
+        
        
         song.src = songs[id]["href"];
         song.play();
@@ -95,18 +104,58 @@ var player = (function(likesController, modal){
             selectSong( Number( currentSong ) );
         }
     }
+
+    var handleRepeat = function(){
+        if(isRepeat){
+            isRepeat = false;
+            this.classList.remove('active--button');
+        }else{
+            isRepeat = true;
+            this.classList.add('active--button');
+            alertify.notify('Repeticion activada', 'success', 3, function(){  console.log('Repeticion activada'); });                        
+        }
+    }
+
+    var handleShuffle  = function (){
+        if(isShuffle){
+            isShuffle = false;
+            this.classList.remove('active--button');
+            console.log("apagando suffle");            
+        }else{
+            isShuffle = true;
+            this.classList.add('active--button');
+            console.log(" encendiendoo shuffle");
+            alertify.notify('el modo aleatorio se ha activado', 'success', 3, function(){  console.log('Repeticion activada'); });    
+        }
+    }
+
+    var handleVolume = function(){
+        console.log(song.volume);
+        song.volume = this.value / 100;
+    
+    }
+
     /************************************
      * handdles current's audio durationn 
     *************************************/
     var handleDuration = function(){
         point.style.width = Number(this.currentTime / this.duration * 100) + "%";
+        var minutes = Math.floor(song.currentTime / 60);   
+        var seconds = Math.floor(song.currentTime - minutes * 60)
+        var x = minutes < 10 ? "0" + minutes : minutes;
+        var y = seconds < 10 ? "0" + seconds : seconds;
+        progressTime.textContent = x + ':' + y;
     }
 
     /************************************
      * handles when audio is ending
     *************************************/
     var handleFinish = function(){
-        handlePrev();
+        if (isRepeat){
+            selectSong(currentSong);
+        } else {
+            handleNext();                           
+        }
     }
 
     var handleModal = function(){
@@ -117,6 +166,15 @@ var player = (function(likesController, modal){
         }
     }
     
+   
+
+
+    function randomId(){
+        var min = 0,
+            max = songs.length - 1;
+
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
 
     function isPlaying(audelem) { return !audelem.paused; }
     /************************************
@@ -218,9 +276,12 @@ var player = (function(likesController, modal){
             song.addEventListener('ended', handleFinish);
             song.addEventListener('timeupdate', handleDuration);
             lirycs.addEventListener('click', handleModal);  
+            buttonShuffle.addEventListener('click', handleShuffle);
+            buttonRepeat.addEventListener('click', handleRepeat);
+            rangeVolume.addEventListener('change', handleVolume);
         }
     }
-})(likes, modal);
+})(likes, modal,alertify);
 
 DomReady.ready(function() { 
     player.init();

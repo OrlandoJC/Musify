@@ -12,6 +12,7 @@ body {
 header {
     padding: 20px;
     width: 100%;
+    background:rgba(28, 181, 224, 0.877);
     background-image: linear-gradient(rgba(28, 181, 224, 0.877), #1010becb);
     background-repeat: no-repeat;
     background-size: cover;
@@ -46,6 +47,7 @@ nav .social {
 
 
 .song__cover img{
+    max-width: 150%;
     -webkit-box-shadow: -2px 10px 47px 1px rgba(0,0,0,0.51);
     -moz-box-shadow: -2px 10px 47px 1px rgba(0,0,0,0.51);
     box-shadow: -2px 10px 47px 1px rgba(0,0,0,0.51);
@@ -63,6 +65,10 @@ nav .social {
     margin-top: 0;
     font-size: 1.2em;
     color: rgba(233, 229, 230, 0.527)
+}
+
+.song__title {
+    margin-bottom: 10px;
 }
 
 .song__description > span {
@@ -89,9 +95,14 @@ nav .social {
     border: 10px;
     display: flex;
     border-radius: 4px;
-    overflow: hidden;
+    margin: 0 10px;
 }
 
+#status-bar {
+    display:  flex;
+    flex-direction: row;
+    align-items: center;
+}
 #point {
     width: 20px;
     height: 100%;
@@ -99,10 +110,14 @@ nav .social {
 }
 
 #buttons {
-    margin-top: 10px;
-    margin-left: 8%;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    margin-left: 17%;
 }
 
+.progress_time {
+    font-size: .8em;
+}
 
 
 
@@ -137,9 +152,17 @@ tr:hover {
     color: white;
 }
 
+.active--button {
+    background-color: #e91152;
+    color: white;
+    border: none;
+}
+
 .white {
     color: white;
 }
+
+
 .center {
     text-align: center;
 }
@@ -160,14 +183,16 @@ tr:hover {
     border-radius: 5px;
     display: inline-block;
     margin-top: 15px;
-    cursor: wait;
 }
 
-.lirycs__button:hover {
-   color: black;
-   background-color: white;
+.song__options {
+    display: flex;
+    text-decoration: none;
 }
 
+.range {
+    display: inline-flex;
+}
 .hideModal {
     visibility: hidden;
 }
@@ -214,6 +239,12 @@ button {
     outline: none;
 }
 
+.button__control {
+    border-radius: 50px;
+    margin: 0 5px;
+    font-size: .8em;
+}
+
 table {
     -webkit-box-shadow: -2px 10px 47px 1px rgba(0,0,0,0.51);
     -moz-box-shadow: -2px 10px 47px 1px rgba(0,0,0,0.51);
@@ -224,6 +255,10 @@ table {
 
 td > img {
     text-align: center;
+}
+
+i {
+    color: white;
 }
 
 
@@ -237,6 +272,122 @@ footer {
 }
 
 
+
+/* range format */
+
+
+
+input[type="range"]::-moz-range-progress {
+    background: #cc1a1a;
+    height: 12px;
+    border-radius: 12px;
+}
+
+input[type="range"]::-ms-fill-lower {
+    background: #CC1A1A;
+    border: 0 solid #000101;
+    border-radius: 50px;
+    box-shadow: 0 0 0 #000000, 0 0 0 #0d0d0d;
+}
+input[type="range"]::-ms-fill-upper {
+    background: #c0c0c0;
+    border: 0 solid #000101;
+    border-radius: 50px;
+    box-shadow: 0 0 0 #000000, 0 0 0 #0d0d0d;
+}
+input[type=range] {
+    
+    display: inline-flex;
+    height: 1px;
+    -webkit-appearance: none;
+    margin: 10px 0;
+    width: 100%;
+    background: white;
+}
+  input[type=range]:focus {
+    outline: none;
+  }
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    box-shadow: 0px 0px 0px white;;
+    background: white;
+    border-radius: 1px;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    box-shadow: 0px 0px 0px white;;
+    height: 14px;
+    width: 14px;
+    border-radius: 30px;
+    background: #e91152;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -4px;
+  }
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    background: white;
+  }
+  input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    animate: 0.2s;
+    box-shadow: 0px 0px 0px #000000;
+    background: gray;
+    border-radius: 1px;
+    border: 0px solid #000000;
+  }
+  input[type=range]::-moz-range-thumb {
+    box-shadow: 0px 0px 0px #000000;
+    border: 1px solid #2497E3;
+    height: 18px;
+    width: 18px;
+    border-radius: 25px;
+    background: #A1D0FF;
+    cursor: pointer;
+  }
+  input[type=range]::-ms-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    animate: 0.2s;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+  }
+  input[type=range]::-ms-fill-lower {
+    background: #2497E3;
+    border: 0px solid #000000;
+    border-radius: 2px;
+    box-shadow: 0px 0px 0px #000000;
+  }
+  input[type=range]::-ms-fill-upper {
+    background: #2497E3;
+    border: 0px solid #000000;
+    border-radius: 2px;
+    box-shadow: 0px 0px 0px #000000;
+  }
+  input[type=range]::-ms-thumb {
+    margin-top: 1px;
+    box-shadow: 0px 0px 0px #000000;
+    border: 1px solid #2497E3;
+    height: 18px;
+    width: 18px;
+    border-radius: 25px;
+    background: gray;
+    cursor: pointer;
+  }
+  input[type=range]:focus::-ms-fill-lower {
+    background: #297E3;
+  }
+  
+  input[type=range]:focus::-ms-fill-upper {
+    background: #2497E3;
+  }
+
+
+
 @media only screen and (max-width: 580px) and (min-width: 300px) {
     nav {
         text-align: center;
@@ -244,6 +395,64 @@ footer {
 
     header {
         text-align: center;
+    }
+
+    header img {
+        margin: 20px auto;
+    }
+    
+    #buttons {
+        margin-left: 8%;
+    }
+    #bar{
+        margin: 0 auto;
+        width: 80%;
+    }
+
+    .ocult {
+        margin-top: -590px;
+    }
+
+    .header__playlist{
+        text-align: center;
+        font-size: 1.5em;
+        margin-bottom: 30px;
+    }
+
+    .song__options {
+        justify-content: center;
+    }
+
+    .lirycs__button {
+        margin-top: 25px;
+        padding: 20px;
+    }
+    
+    main {
+        margin: 40px;
+    }
+
+    .modalElement{
+        width: 90%;
+        left: 5%;
+    }
+
+    .range {
+        display: none;
+    }
+
+}
+
+
+
+@media only screen and (max-width: 760px) and (min-width: 580px) {
+    nav {
+        text-align: center;
+    }
+
+    header {
+        text-align: center;
+        padding: 20px 90px;
     }
 
     header img {
@@ -266,11 +475,15 @@ footer {
         margin-bottom: 30px;
     }
 
+    .song__options {
+        justify-content: center;
+    }
+
     .lirycs__button {
         margin-top: 25px;
         padding: 20px;
-    
     }
+    
     main {
         margin: 40px;
     }
@@ -278,6 +491,18 @@ footer {
     .modalElement{
         width: 90%;
         left: 5%;
+    }
+
+    .range {
+        display: none;
+    }
+
+    #buttons {
+        margin-left: 10%;
+    }
+
+    .button__control {
+        margin: 20px 10px;
     }
 
 }
