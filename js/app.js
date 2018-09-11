@@ -62,7 +62,6 @@ var player = (function(likesController, modal, alertify){
         modal.createModal();
         modal.fillModal(songs[id]["lirycs"]);
     }
-    
 
     /********************** 
      * Handles play button 
@@ -78,7 +77,7 @@ var player = (function(likesController, modal, alertify){
     }
 
     /***********************
-     * hanfles next button 
+     * handles next button 
     ************************/
     var handleNext = function(){
         if( currentSong > songs.length - 2 ) {
@@ -120,7 +119,6 @@ var player = (function(likesController, modal, alertify){
         if(isShuffle){
             isShuffle = false;
             this.classList.remove('active--button');
-            console.log("apagando suffle");            
         }else{
             isShuffle = true;
             this.classList.add('active--button');
@@ -130,20 +128,19 @@ var player = (function(likesController, modal, alertify){
     }
 
     var handleVolume = function(){
-        console.log(song.volume);
         song.volume = this.value / 100;
-    
     }
 
     /************************************
      * handdles current's audio durationn 
     *************************************/
     var handleDuration = function(){
+        var minutes = Math.floor(song.currentTime / 60),
+            seconds = Math.floor(song.currentTime - minutes * 60),
+            x       = minutes < 10 ? "0" + minutes : minutes,
+            y       = seconds < 10 ? "0" + seconds : seconds;
+
         point.style.width = Number(this.currentTime / this.duration * 100) + "%";
-        var minutes = Math.floor(song.currentTime / 60);   
-        var seconds = Math.floor(song.currentTime - minutes * 60)
-        var x = minutes < 10 ? "0" + minutes : minutes;
-        var y = seconds < 10 ? "0" + seconds : seconds;
         progressTime.textContent = x + ':' + y;
     }
 
@@ -165,14 +162,10 @@ var player = (function(likesController, modal, alertify){
             modal.closeModal();
         }
     }
-    
-   
-
 
     function randomId(){
         var min = 0,
             max = songs.length - 1;
-
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 
@@ -253,12 +246,12 @@ var player = (function(likesController, modal, alertify){
                 console.log("eliminado");
                 var data = JSON.parse(request.responseText);
                 callback(data);
-            } else {
             }
         };
 
         request.onerror = function() {
         // There was a connection error of some sort
+            console.error("there was an error")
         };
 
         request.send();
